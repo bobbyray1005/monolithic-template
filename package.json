@@ -1,0 +1,24 @@
+{
+  "name": "express-react-monolith",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "run-s build:client start:server",
+    "dev": "run-p start:server start:client",
+    "start:server": "node index.js",
+    "start:client": "cd client && npm start",
+    "build:client": "cd client && npm run build",
+    "setup": "run-s install:client install:server",
+    "setup:client": "cd client && npm i",
+    "setup:server": "npm i"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "helmet": "^4.6.0",
+    "npm-run-all": "^4.1.5"
+  }
+}
